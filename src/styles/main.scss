@@ -1,5 +1,6 @@
 $text: #27300f;
 $orange: #d26a22;
+$white: #fff;
 
 .header {
     max-width: 1440px;
@@ -36,13 +37,25 @@ $orange: #d26a22;
         display: block;
         width: 40px;
         height: 40px;
+        border-radius: 100%;
         background-color: $orange;
         background-image: url(../images/cart.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 17px 15px;
+        position: relative;
+    }
+    &__counter {
+        font-size: 8px;
+        color: $white;
+        position: absolute;
+        right: 10px;
+        top: 6px
     }
 }
 .logo {
     display: block;
-    background-image: url(../);
+    background-image: url(../images/logo.svg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 123px;
