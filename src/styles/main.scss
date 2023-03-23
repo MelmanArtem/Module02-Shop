@@ -1,5 +1,6 @@
 $text: #27300f;
 $orange: #d26a22;
+
 .header {
     max-width: 1440px;
     margin: 0 auto;
@@ -33,7 +34,10 @@ $orange: #d26a22;
     }
     &__cart {
         display: block;
-        background-image: url(../images/logo.svg);
+        width: 40px;
+        height: 40px;
+        background-color: $orange;
+        background-image: url(../images/cart.svg);
     }
 }
 .logo {
