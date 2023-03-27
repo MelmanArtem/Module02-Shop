@@ -17,6 +17,10 @@ body {
     color: $green;
 }
 
+ul, .description {
+    margin: 0;
+}
+
 .header {
     max-width: 1440px;
     margin: 0 auto;
@@ -27,24 +31,19 @@ body {
     &__nav {
         display: flex;
         list-style-type: none;
-        margin: 0;
         padding-left: 0;
         gap: 4.8rem;
     }
-    &__link {
+    &__link, &__tel {
         color: $green;
         text-decoration: none;
+        transition: 0.3s;
         &:hover {
             color: $orange;
         }
     }
     &__tel {
-        color: $green;
         font-weight: 500;
-        text-decoration: none;
-        &:hover {
-            color: $orange;
-        }
     }
     &__cart {
         display: block;
@@ -113,7 +112,6 @@ body {
     }
 }
 .description {
-    margin: 0;
     &_size-s {
         font-size: 1.8rem;
     }
@@ -127,5 +125,12 @@ body {
     text-decoration: none;
     border-radius: 3.8rem;
     display: inline-block;
+    transition: 0.3s;
 }
+.link:hover {
+    background-color: transparent;
+    color: $orange;
+    border: 1px solid  $orange;
+}
+
 
