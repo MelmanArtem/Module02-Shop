@@ -88,6 +88,7 @@ ul, .description {
     background-size: cover;
     background-position-x: center;
     position: relative;
+    padding-bottom: 18.7rem;
     &__item {
         margin-left: 12rem;
         max-width: 378px;
@@ -152,9 +153,45 @@ ul, .description {
     }
     &__tomato {
         position: absolute;
-        bottom: 0;
-        right: 0;
+        bottom: 15rem;
+        right: 14rem;
         width: 11rem;
+    }
+    &__avocado {
+        position: absolute;
+        top: 5rem;
+        right: .1rem;
+        width: 17.8rem;
+    }
+    &__cucumber {
+        position: absolute;
+        top: 0;
+        left: 72rem;
+        width: 8.4rem;
+    }
+    &__pepper {
+        position: absolute;
+        top: 40rem;
+        left: 4rem;
+        width: 8.6rem;
+    }
+    &__bean1 {
+        position: absolute;
+        bottom: 26rem;
+        left: 2.6rem;
+        width: 4.7rem;
+    }
+    &__bean2 {
+        position: absolute;
+        bottom: 22rem;
+        left: 0;
+        width: 3.6rem;
+    }
+    &__bean3 {
+        position: absolute;
+        bottom: 17.5rem;
+        left: 5rem;
+        width: 6.6rem;
     }
 }
 .title {
