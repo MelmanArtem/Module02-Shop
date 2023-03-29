@@ -152,27 +152,27 @@ ul, .description {
             position: absolute;
         }
         &_1 {
-            top: 10rem;
-            left: 11.3rem;
+            top: 4rem;
+            left: 8rem;
             &::before {
-                top: 10rem;
-                left: 11.3rem;
+                top: 2rem;
+                left: 8.1rem;
             }
         }
         &_2 {
             top: 20rem;
-            right: 9.8rem;
+            right: -0.5rem;
             &::before {
-                top: 0;
-                right: 0;
+                top: 2.6rem;
+                right: 8.9rem;
             }
         }
         &_3 {
-            bottom: 5.2rem;
-            right: 31.3rem;
+            bottom: -4.8rem;
+            right: 25.3rem;
             &::before {
-                bottom: 0;
-                right: 0;
+                bottom: 5.6rem;
+                right: 2rem;
             }
         }
     }
