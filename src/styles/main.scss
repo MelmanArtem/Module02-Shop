@@ -128,28 +128,57 @@ ul, .description {
         width: 90%;
     }
     &__btn {
+        background-color: transparent;
         border: none;
-        background-color: $green;
         padding: 0;
-        width: 1.1rem;
-        height: 1.1rem;
-        box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
-        border-radius: 100%;
         position: absolute;
+        color: $green;
+        text-align: left;
+        &:hover {
+            .main__btn {
+                &::before {
+                    background-color: $orange;
+                    box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
+                }
+            }
+        }
+        &::before {
+            content: '';
+            
+            width: 1.1rem;
+            height: 1.1rem;
+            box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
+            border-radius: 100%;
+            position: absolute;
+        }
         &_1 {
             top: 10rem;
             left: 11.3rem;
+            &::before {
+                top: 10rem;
+                left: 11.3rem;
+            }
         }
         &_2 {
             top: 20rem;
             right: 9.8rem;
-            background-color: $orange;
-            box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
+            &::before {
+                top: 0;
+                right: 0;
+            }
         }
         &_3 {
             bottom: 5.2rem;
             right: 31.3rem;
+            &::before {
+                bottom: 0;
+                right: 0;
+            }
         }
+    }
+    &__food {
+        display: block;
+        color: rgba($green, 0.8);
     }
     &__tomato {
         position: absolute;
