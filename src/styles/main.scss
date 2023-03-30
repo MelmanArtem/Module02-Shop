@@ -64,9 +64,11 @@ ul, .description {
         background-size: 1.7rem 1.5rem;
         position: relative;
         border: 1px solid  $orange;
+        transition-duration: 0.4s;
         &:hover {
             background-color: $green;
             border: 1px solid  $green;
+            cursor: pointer;
         }
     }
     &__counter {
@@ -92,9 +94,6 @@ ul, .description {
     &__item {
         margin-left: 12rem;
         max-width: 378px;
-        margin-top: 6rem;
-    }
-    &__link {
         margin-top: 6rem;
     }
     &__flex {
@@ -252,11 +251,13 @@ ul, .description {
     border-radius: 3.8rem;
     display: inline-block;
     transition: 0.3s;
+    border: 1px solid $orange;
+    transition-duration: 0.4s;
+    margin-top: 6rem;
 }
 .link:hover {
     background-color: transparent;
     color: $orange;
-    border: 1px solid  $orange;
 }
 
 
