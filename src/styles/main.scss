@@ -20,7 +20,7 @@ body {
     display: block;
     background-image: url(../images/logo.svg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     width: 12.3rem;
     height: 3.2rem;
 }
@@ -54,8 +54,8 @@ ul, .description {
     }
     &__cart {
         display: block;
-        width: 3.8rem;
-        height: 3.8rem;
+        width: 4rem;
+        height: 4rem;
         border-radius: 100%;
         background-color: $orange;
         background-image: url(../images/cart.svg);
@@ -89,8 +89,10 @@ ul, .description {
     background-image: url(../images/main.png);
     background-size: cover;
     background-position-x: center;
+    background-repeat: no-repeat;
     position: relative;
     padding-bottom: 18.7rem;
+    z-index: 0;
     &__item {
         margin-left: 12rem;
         max-width: 378px;
@@ -103,8 +105,8 @@ ul, .description {
         gap: 5rem;
     }
     &__cover {
-        flex-basis: 763px;
-        height: 763px;
+        flex-basis: 758px;
+        height: 758px;
         border: 1px solid rgba($green, 0.4);
         border-radius: 100%;
         display: flex;
@@ -114,8 +116,8 @@ ul, .description {
         position: relative;
     }
     &__line {
-        width: 658px;
-        height: 658px;
+        width: 656px;
+        height: 656px;
         border: 1px solid rgba($green, 0.4);
         border-radius: 100%;
         display: flex;
@@ -125,6 +127,9 @@ ul, .description {
     }
     &__image {
         width: 90%;
+    }
+    &__text {
+        padding-top: 4rem;
     }
     &__btn {
         background-color: transparent;
@@ -184,42 +189,49 @@ ul, .description {
         bottom: 15rem;
         right: 14rem;
         width: 11rem;
+        z-index: -1;
     }
     &__avocado {
         position: absolute;
-        top: 5rem;
-        right: .1rem;
+        top: 5.6rem;
+        right: 0;
         width: 17.8rem;
+        z-index: -1;
     }
     &__cucumber {
         position: absolute;
         top: 0;
         left: 72rem;
         width: 8.4rem;
+        z-index: -1;
     }
     &__pepper {
         position: absolute;
         top: 40rem;
         left: 4rem;
         width: 8.6rem;
+        z-index: -1;
     }
     &__bean1 {
         position: absolute;
         bottom: 26rem;
         left: 2.6rem;
         width: 4.7rem;
+        z-index: -1;
     }
     &__bean2 {
         position: absolute;
         bottom: 22rem;
         left: 0;
         width: 3.6rem;
+        z-index: -1;
     }
     &__bean3 {
         position: absolute;
         bottom: 17.5rem;
         left: 5rem;
         width: 6.6rem;
+        z-index: -1;
     }
 }
 .title {
@@ -237,14 +249,20 @@ ul, .description {
     }
 }
 .description {
+    margin: 0;
+    line-height: 1.5;
     &_size-s {
         font-size: 1.8rem;
+    }
+    &_size-m {
+        font-size: 2.4rem;
     }
 }
 .link {
     color: $white;
+    letter-spacing: 0.13rem;
     text-transform: uppercase;
-    padding: 2.49rem 4.19rem;
+    padding: 2.4rem 4.3rem;
     background-color: $orange;
     box-shadow: 0px 1rem 1.1rem .2rem rgba(207, 92, 13, 0.2);
     text-decoration: none;
@@ -259,5 +277,39 @@ ul, .description {
     background-color: transparent;
     color: $orange;
 }
-
+.offer {
+    background-image: url(../images/offer.png);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    padding-top: 2rem;
+    padding-bottom: 20rem;
+    &__text {
+        margin-top: 6rem;
+        min-width: 70rem;
+    }
+    &__slider {
+        overflow: hidden;
+        padding-top: 10rem;
+    }
+}
+.swiper {
+    overflow: initial;
+    &-slide {
+        border: 1px solid $green;
+    }
+    &-pagination {
+        display: none;
+    }
+    &-button-next, &-button-prev {
+        top: -6rem;
+        &::after {
+            color: $green;
+        }
+    }
+    &-button-prev {
+        left: initial;
+        right: 10rem;
+    }
+}
 
