@@ -303,13 +303,22 @@ ul, .description {
     }
     &-button-next, &-button-prev {
         top: -6rem;
-        &::after {
-            color: $green;
+        &:hover {
+            &::after {
+                color: $green;
+            }
         }
+        &::after {
+            color: rgba($green, 0.4);
+            font-size: 2rem;
+        }
+    }
+    &-button-next {
+        right: -0.8rem;
     }
     &-button-prev {
         left: initial;
-        right: 10rem;
+        right: 7.5rem;
     }
 }
 
