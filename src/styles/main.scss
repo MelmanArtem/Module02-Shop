@@ -399,4 +399,65 @@ ul, .description {
         right: 7.5rem;
     }
 }
-
+.about {
+    background-image: url(../images/offer.png);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    padding-top: 2rem;
+    padding-bottom: 10rem;
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 7rem;
+    }
+    &__text {
+        margin-left: 12rem;
+        flex-basis: 62rem;
+    }
+    &__list {
+        list-style: none;
+        display: flex;
+        gap: 9rem;
+        font-family: $font-cormorant;
+        font-style: italic;
+        font-size: 3rem;
+        margin: 0;
+        padding-left: 0;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &::before {
+            content: '';
+            width: 84px;
+            height: 84px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            border: 1px solid rgba($green, 0.4);
+            border-radius: 100%;
+            margin-bottom: 1.5rem;
+        }
+        &:nth-child(1) {
+            &::before {
+                background-image: url(../images/about-icon-1.svg);
+                background-size: 4.4rem 4.1rem;
+            }
+        }
+        &:nth-child(2) {
+            &::before {
+            background-image: url(../images/about-icon-2.svg);
+            background-size: 4rem 4rem;
+            }
+        }
+        &:nth-child(3) {
+            &::before {
+            background-image: url(../images/about-icon-3.svg);
+            background-size: 4.5rem 3.9rem;
+            }
+        }
+    }
+}
