@@ -98,6 +98,9 @@ ul, .description {
         max-width: 378px;
         margin-top: 6rem;
     }
+    &__link {
+        margin-top: 6rem;
+    }
     &__flex {
         display: flex;
         justify-content: space-between;
@@ -271,7 +274,6 @@ ul, .description {
     transition: 0.3s;
     border: 1px solid $orange;
     transition-duration: 0.4s;
-    margin-top: 6rem;
 }
 .link:hover {
     background-color: transparent;
