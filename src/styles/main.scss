@@ -260,6 +260,7 @@ ul, .description {
     }
     &_size-m {
         font-size: 2.4rem;
+        color: $green;
     }
 }
 .link {
@@ -316,6 +317,7 @@ ul, .description {
         background-size: cover;
         position: relative;
         z-index: 0;
+        transition: 0.3s;
         &_white {
             height: 52rem;
             display: flex;
@@ -449,6 +451,7 @@ ul, .description {
 }
 .counter {
     display: flex;
+    cursor: pointer;
     &__btn {
         cursor: pointer;
         width: 5rem;
@@ -617,6 +620,7 @@ ul, .description {
         border-radius: 2rem;
         padding: 2.7rem 3rem 3.8rem;
         box-sizing: border-box;
+        transition: 0.3s;
         &:hover {
             box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
         }
