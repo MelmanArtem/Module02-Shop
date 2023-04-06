@@ -749,8 +749,39 @@ ul, .description {
             max-width: 40rem;
             flex-grow: 1;
         }
+        &__list {
+            list-style-type: none;
+        }
         &__form {
             flex-basis: 59rem;
+        }
+        &__link {
+            color: #27300f;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            &::before {
+                content: '';
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 2.9rem;
+                height: 3rem;
+                display: block;
+            }
+        }
+        &__tel {
+            &::before {
+                background-image: url(../images/phone.svg);
+                background-size: 2.9rem 3rem;
+            }
+        }
+        &__mail {
+            &::before {
+                background-image: url(../images/mail.svg);
+                background-size: 2.9rem 3rem;
+            }
         }
     }
 }
@@ -803,4 +834,5 @@ ul, .description {
         border-bottom: 1px solid #ecedec;
     }
 }
+
 
