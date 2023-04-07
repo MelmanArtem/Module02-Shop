@@ -82,8 +82,8 @@ ul, .description {
 .container {
     max-width: 1440px;
     margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 .main {
     background-image: url(../images/main.png);
@@ -192,48 +192,42 @@ ul, .description {
     &__bean2,
     &__bean3 {
         position: absolute;
+        z-index: -1;
     }
     &__tomato {  
         bottom: 15rem;
         right: 14rem;
         width: 11rem;
-        z-index: -1;
     }
     &__avocado {  
         top: 5.6rem;
         right: 0;
         width: 17.8rem;
-        z-index: -1;
     }
     &__cucumber { 
         top: 0;
         left: 72rem;
         width: 8.4rem;
-        z-index: -1;
     }
     &__pepper {
         top: 40rem;
         left: 4rem;
         width: 8.6rem;
-        z-index: -1;
     }
     &__bean1 {
         bottom: 26rem;
         left: 2.6rem;
         width: 4.7rem;
-        z-index: -1;
     }
     &__bean2 {
         bottom: 22rem;
         left: 0;
         width: 3.6rem;
-        z-index: -1;
     }
     &__bean3 {
         bottom: 17.5rem;
         left: 5rem;
         width: 6.6rem;
-        z-index: -1;
     }
 }
 .title {
@@ -300,7 +294,7 @@ ul, .description {
     padding-bottom: 12.8rem;
     &__text {
         margin-top: 6rem;
-        min-width: 70rem;
+        max-width: 66rem;
     }
 }
 .slider {
@@ -455,7 +449,6 @@ ul, .description {
     display: flex;
     cursor: pointer;
     &__btn {
-        cursor: pointer;
         width: 5rem;
         height: 5rem;
         border: 1px solid $green;
@@ -476,7 +469,7 @@ ul, .description {
     }
     &__minus {
         background-image: url(../images/minus-counter.svg);
-        opacity: .4;
+        opacity: 0.4;
     }
     &__plus {
         background-image: url(../images/plus-counter.svg);
@@ -576,6 +569,7 @@ ul, .description {
         margin-top: 6rem;
         &:hover {
             opacity: 1;
+            cursor: pointer;
         }
         &::before {
             content: '';
@@ -780,8 +774,11 @@ ul, .description {
                 display: block;
             }
         }
-        &__tel {
+        &__item {
             margin-bottom: 1.5rem;
+        }
+        &__tel, 
+        &__mail {
             &::before {
                 background-image: url(../images/phone.svg);
                 background-size: 2.9rem 3rem;
@@ -790,7 +787,6 @@ ul, .description {
         &__mail {
             &::before {
                 background-image: url(../images/mail.svg);
-                background-size: 2.9rem 3rem;
             }
         }
     }
@@ -837,6 +833,7 @@ ul, .description {
     }
     &__link {
         margin-top: 1.2rem;
+        cursor: pointer;
     }
     &__docs {
         color: rgba($green, .6);
