@@ -64,11 +64,12 @@ ul, .description {
         background-size: 1.7rem 1.5rem;
         position: relative;
         border: 1px solid  $orange;
-        transition-duration: 0.4s;
+        padding: 0;
+        transition: 0.3s;
+        cursor: pointer;
         &:hover {
             background-color: $green;
             border: 1px solid  $green;
-            cursor: pointer;
         }
     }
     &__counter {
@@ -847,6 +848,86 @@ ul, .description {
     background-size: cover;
     background-position-x: center;
     background-repeat: no-repeat;
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.8rem;
+    }
+    &__list {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 0;
+    }
+    &__item {
+        margin-bottom: 2.6rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__link {
+        color: $green;
+        text-decoration: none;
+        transition: 0.2s;
+        &:hover {
+            color: $orange;
+        }
+    }
+    &__tel {
+        font-size: 2.7rem;
+        display: block;
+        margin-bottom: 3rem;
+    }
+    &__text {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.6rem;
+        color: rgba($green, .6);
+        margin-top: 4rem;
+    }
+    &__author {
+        color: rgba($green, .6);
+        text-decoration: none;
+        transition: 0.3s;
+        &:hover {
+            color: rgba($green, 1);
+        }
+    }  
+}
+
+.footer-social {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 0;
+    margin-top: 3rem;
+    margin-bottom: 0;
+    &__link {
+        display: block;
+        width: 4.6rem;
+        height: 4.6rem;
+        border: 2px solid $green;
+        border-radius: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: .8;
+        transition: 0.3s;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__vk {
+        background-image: url(../images/vk.svg);
+        background-size: 2.3rem;
+    }
+    &__inst {
+        background-image: url(../images/inst.svg);
+        background-size: 1.8rem;
+    }
+    &__fb {
+        background-image: url(../images/fb.svg);
+        background-size: 1.8rem;
+    }
 }
 
 
