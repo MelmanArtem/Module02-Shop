@@ -771,6 +771,7 @@ ul, .description {
             display: flex;
             align-items: center;
             gap: 3rem;
+            transition: 0.4s;
             &::before {
                 content: '';
                 background-repeat: no-repeat;
@@ -785,6 +786,9 @@ ul, .description {
         }
         &__tel, 
         &__mail {
+            &:hover {
+                color: $orange;
+            }
             &::before {
                 background-image: url(../images/phone.svg);
                 background-size: 2.9rem 3rem;
@@ -882,7 +886,7 @@ footer {
     &__link {
         color: $green;
         text-decoration: none;
-        transition: 0.2s;
+        transition: 0.4s;
         &:hover {
             color: $orange;
         }
