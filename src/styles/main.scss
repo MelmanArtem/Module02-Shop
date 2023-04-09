@@ -2,6 +2,7 @@
 
 $green: #27300f;
 $orange: #d26a22;
+$dark-orange: #cf5c0d;
 $white: #fff;
 
 $font-jost: 'Jost', sans-serif;
@@ -15,6 +16,10 @@ body {
     font-size: 1.6rem;
     font-family: $font-jost;
     color: $green;
+    background-image: url(../images/background.png);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
 }
 .logo {
     display: block;
@@ -92,10 +97,6 @@ ul, .description {
     padding-right: 25px;
 }
 .main {
-    background-image: url(../images/main.png);
-    background-size: cover;
-    background-position-x: center;
-    background-repeat: no-repeat;
     position: relative;
     padding-bottom: 18.7rem;
     z-index: 0;
@@ -145,11 +146,9 @@ ul, .description {
         color: $green;
         text-align: left;
         &:hover {
-            .main__btn {
-                &::before {
-                    background-color: $orange;
-                    box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
-                }
+            &::before {
+                background-color: $orange;
+                box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
             }
         }
         &::before {
@@ -160,6 +159,7 @@ ul, .description {
             box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
             border-radius: 100%;
             position: absolute;
+            transition: 0.3s;
         }
         &_1 {
             top: 4rem;
@@ -253,6 +253,9 @@ ul, .description {
     &_catalog {
         margin-top: 18rem;
     }
+    &_trends {
+        margin-top: 9rem;
+    }
 }
 .description {
     margin: 0;
@@ -275,8 +278,8 @@ ul, .description {
     text-decoration: none;
     border-radius: 3.8rem;
     display: inline-block;
-    border: 1px solid $orange;
-    transition-duration: 0.4s;
+    border: none;
+    transition: 0.3s;
     &_min {
         font-size: 1.4rem;
         padding: 2rem 3.4rem;
@@ -286,16 +289,11 @@ ul, .description {
         margin-top: 6rem;
     }
     &:hover {
-        background-color: transparent;
-        color: $orange;
+        background-color: $dark-orange;
     }
 }
 
 .offer {
-    background-image: url(../images/offer.png);
-    background-size: cover;
-    background-position-x: center;
-    background-repeat: no-repeat;
     padding-top: 2rem;
     padding-bottom: 12.8rem;
     &__text {
@@ -606,7 +604,7 @@ ul, .description {
         text-decoration: none;
         border-radius: 4rem;
         display: block;
-        transition-duration: 0.4s;
+        transition: 0.4s;
         &:hover {
             border: 1px solid $orange;
             color: $orange;
@@ -712,29 +710,31 @@ ul, .description {
         gap: 3rem;
         margin-top: 4.3rem;
     }
-    &__item {
-        height: 32px;
+    &__item { 
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
         opacity: .4;
+        transform: scale(1);
         transition: 0.3s;
         &:hover {
             opacity: 1;
+            transform: scale(1.05);
         }
     }
     &__mastercard {
-        width: 5.3rem;
+        height: 32px;
+        width: 5.4rem;
         background-image: url(../images/mastercard.svg);
     } 
     &__visa {
         height: 25px;
-        width: 8.4rem;
+        width: 8.2rem;
         background-image: url(../images/visa.svg);
     }
     &__paypal {
         height: 27px;
-        width: 9.7rem;
+        width: 9.6rem;
         background-image: url(../images/paypal.svg);
     }
 }
@@ -771,6 +771,7 @@ ul, .description {
             display: flex;
             align-items: center;
             gap: 3rem;
+            transform: scale(1);
             transition: 0.4s;
             &::before {
                 content: '';
@@ -788,6 +789,7 @@ ul, .description {
         &__mail {
             &:hover {
                 color: $orange;
+                transform: scale(1.01);
             }
             &::before {
                 background-image: url(../images/phone.svg);
@@ -858,10 +860,6 @@ footer {
     padding-bottom: 7rem;
 }
 .footer {
-    background-image: url(../images/footer.png);
-    background-size: cover;
-    background-position-x: center;
-    background-repeat: no-repeat;
     &__box {
         display: flex;
         justify-content: space-between;
@@ -947,6 +945,4 @@ footer {
         background-image: url(../images/fb.svg);
         background-size: 1.8rem;
     }
-}
-
-
+} 
