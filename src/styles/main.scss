@@ -451,7 +451,6 @@ ul, .description {
 }
 .counter {
     display: flex;
-    cursor: pointer;
     &__btn {
         width: 5rem;
         height: 5rem;
@@ -460,6 +459,7 @@ ul, .description {
         padding: 0;
         background-position: center center;
         border-radius: 100%;
+        cursor: pointer;
         &_min {
             width: 4rem;
             height: 4rem;
@@ -467,13 +467,15 @@ ul, .description {
     }
     &__minus,
     &__plus {
-        pointer-events: none;
         background-size: 2rem 1.1rem;
         background-repeat: no-repeat;
     }
     &__minus {
         background-image: url(../images/minus-counter.svg);
-        opacity: 0.4;
+        opacity: .4;
+        &:hover {
+            opacity: 1;
+        }
     }
     &__plus {
         background-image: url(../images/plus-counter.svg);
@@ -910,7 +912,6 @@ footer {
         }
     }  
 }
-
 .footer-social {
     list-style-type: none;
     display: flex;
@@ -927,7 +928,7 @@ footer {
         border-radius: 100%;
         background-repeat: no-repeat;
         background-position: center;
-        opacity: .8;
+        opacity: .7;
         transition: 0.3s;
         &:hover {
             opacity: 1;
