@@ -473,6 +473,7 @@ ul, .description {
     &__minus {
         background-image: url(../images/minus-counter.svg);
         opacity: .4;
+        transition: 0.3s;
         &:hover {
             opacity: 1;
         }
