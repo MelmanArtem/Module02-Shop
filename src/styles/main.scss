@@ -133,7 +133,9 @@ ul, .description {
         align-items: center;
     }
     &__image {
-        width: 90%;
+        width: 92%;
+        border-radius: 100%;
+        box-shadow: 20px 20px 33px 0px rgba($green, 0.5);
     }
     &__text {
         padding-top: 4rem;
@@ -824,12 +826,11 @@ ul, .description {
     &__input {
         border: 1px solid rgba($green, 0.4);
         border-radius: 2rem;
-        margin-bottom: 2.8rem;
         display: block;
         padding: 2.2rem 3rem;
-        margin-bottom: 2rem;
         width: 100%;
         box-sizing: border-box;
+        margin-bottom: 2.8rem;
         &:focus {
             border: 1px solid rgba($green, 1);
             outline: none;
