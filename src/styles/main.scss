@@ -20,6 +20,7 @@ $r_desk_1120: 1120px;
 $r_desk_hd:1200px;
 $r_desk_1280:1280px;
 $r_desk_1350:1350px;
+$r_desk_full_1750:1750px;
 
 html {
     font-size: 10px;
@@ -395,11 +396,27 @@ ul, .description {
         bottom: 15rem;
         right: 14rem;
         width: 11rem;
+        @media (max-width: $r_desk_full_1750) {
+            right: 8rem;
+            width: 9rem;
+        }
+        @media (max-width: $r_desk_1350) {
+            right: 5rem;
+            width: 8.5rem;
+        }
+        @media (max-width: $r_desk_hd) {
+            right: 3rem;
+            width: 8rem;
+        }
     }
     &__avocado {  
         top: 5.6rem;
         right: 0;
         width: 17.8rem;
+        @media (max-width: $r_desk_full_1750) {
+            width: 9.8rem;
+            top: 12rem;
+        }
     }
     &__cucumber { 
         top: 0;
@@ -410,6 +427,9 @@ ul, .description {
         top: 40rem;
         left: 4rem;
         width: 8.6rem;
+        @media (max-width: $r_desk_full_1750) {
+            display: none;
+        }
     }
     &__bean1 {
         bottom: 26rem;
@@ -716,6 +736,12 @@ ul, .description {
     &__text {
         margin-left: 12rem;
         flex-basis: 62rem;
+        @media (max-width: $r_desk_1280) {
+            margin-left: 8rem
+        }
+        @media (max-width: $r_desk_1120) {
+            margin-left: 4rem;
+        }
     }
     &__list {
         list-style: none;
@@ -726,6 +752,12 @@ ul, .description {
         font-size: 3rem;
         margin: 0;
         padding-left: 0;
+        @media (max-width: $r_desk_1280) {
+            gap: 7rem;
+        }
+        @media (max-width: $r_desk_1120) {
+            gap: 6rem;
+        }
     }
     &__item {
         display: flex;
