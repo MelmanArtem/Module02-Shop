@@ -193,12 +193,14 @@ ul, .description {
         }  
     }
 }
-
 .container {
     max-width: 1440px;
     margin: 0 auto;
     padding-left: 25px;
     padding-right: 25px;
+    @media (max-width: $r_tab) {
+        max-width: 600px;
+    }
 }
 .main {
     position: relative;
@@ -211,12 +213,30 @@ ul, .description {
         @media (max-width: $r_desk_1280) {
             margin-left: 8rem
         }
+        @media (max-width: $r_desk_1120) {
+            margin-left: 4rem;
+        }
+        @media (max-width: $r_tab) {
+            max-width: 100%;
+            margin-left: 0;
+            margin-top: 3rem;
+        }
+    }
+    &__link {
+        margin-top: 1.3rem;
+        @media (max-width: $r_tab) {
+            text-align: center;
+        }
     }
     &__flex {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 5rem;
+        @media (max-width: $r_desk_1120) {
+            padding-top: 3rem;
+            padding-bottom: 9rem;
+        }
     }
     &__cover {
         flex-basis: 758px;
@@ -236,8 +256,13 @@ ul, .description {
             flex-basis: 600px;
             height: 600px;
         }
-        @media (max-width: $r_desk_1280) {
+        @media (max-width: $r_desk_1120) {
             border: 1px solid transparent;
+            height: auto;
+            flex-basis: calc(100% - 395px);
+        }
+        @media (max-width: $r_tab) {
+            display: none;
         }
     }
     &__line {
@@ -262,10 +287,26 @@ ul, .description {
     &__image {
         width: 92%;
         border-radius: 100%;
-        animation: shadow 6s infinite;
+        animation: shadow 6s infinite;    
+    }
+    &__imagemobi {
+        display: none;
+        @media (max-width: $r_tab) {
+            display: block;
+            max-width: 300px;
+            margin: 0 auto;
+            margin-top: 3rem;
+        }
     }
     &__text {
         padding-top: 4rem;
+        @media (max-width: $r_desk_1120) {
+            flex-basis: 395px;
+        }
+        @media (max-width: $r_tab) {
+            flex-basis: 100%;
+            padding-top: 0;
+        }
     }
     &__btn {
         background-color: transparent;
@@ -296,6 +337,9 @@ ul, .description {
             @media (max-width: $r_desk_hd) {
                 left: 2.5rem;
             }
+            @media (max-width: $r_desk_1120) {
+                display: none;
+            }
             &::before {
                 top: 2rem;
                 left: 8.1rem;
@@ -310,6 +354,9 @@ ul, .description {
             @media (max-width: $r_desk_hd) {
                 top: 5.5rem;
             }
+            @media (max-width: $r_desk_1120) {
+                display: none;
+            }
             &::before {
                 top: 2.6rem;
                 right: 8.9rem;
@@ -320,6 +367,9 @@ ul, .description {
             right: 25.3rem;
             @media (max-width: $r_desk_1350) {
                 bottom: -5.8rem;
+            }
+            @media (max-width: $r_desk_1120) {
+                display: none;
             }
             &::before {
                 bottom: 5.6rem;
@@ -386,6 +436,12 @@ ul, .description {
     @media (max-width: $r_desk_1280) {
         font-size: 7rem;
     }
+    @media (max-width: $r_desk_1120) {
+        font-size: 6rem;
+    }
+    @media (max-width: $r_tab) {
+        text-align: center;
+    }
     &__span {
         font-style: italic;
     }
@@ -404,6 +460,9 @@ ul, .description {
 .description {
     margin: 0;
     line-height: 1.5;
+    @media (max-width: $r_tab) {
+        text-align: center;
+    }
     &__size-s {
         font-size: 1.8rem;
         @media (max-width: $r_desk_1280) {
