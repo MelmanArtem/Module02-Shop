@@ -530,14 +530,19 @@ ul, .description {
     padding-bottom: 12.8rem;
     &__text {
         margin-top: 6rem;
-        max-width: 66rem;
+        max-width: 70rem;
     }
 }
 .slider {
     overflow: hidden;
-    padding-top: 10rem; 
+    padding-top: 9.4rem; 
+    @media (max-width: $r_tab) {
+        max-width: 450px;
+        margin: 0 auto;
+        padding-top: 5.4rem;
+        padding-bottom: 6rem;
+    }
 }
-
 .swiper {
     overflow: initial;
     &-slide {
@@ -555,7 +560,11 @@ ul, .description {
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
+            background-size: contain;
             padding: 4rem 3.7rem;
+            @media (max-width: $r_desk_hd) {
+                height: 400px;
+            }
             &:hover {
                 .swiper-slide__hover {
                     height: 23.3rem;
@@ -660,9 +669,15 @@ ul, .description {
     }
     &-pagination {
         display: none;
+        @media (max-width: $r_tab) {
+            display: block;
+        }
     }
     &-button-next, &-button-prev {
         top: -6rem;
+        @media (max-width: $r_tab) {
+            display: none;
+        }
         &:hover {
             &::after {
                 color: $green;
@@ -680,6 +695,20 @@ ul, .description {
         left: initial;
         right: 7.5rem;
     }
+}
+.swiper-horizontal>.swiper-pagination-bullets {
+    bottom: -50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.swiper-pagination-bullet-active {
+    background: $orange;
+    border: 1px solid $orange;
+}
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
 }
 .counter {
     display: flex;
