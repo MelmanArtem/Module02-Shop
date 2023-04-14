@@ -23,6 +23,9 @@ $r_desk_full_1750: 1750px;
 
 html {
     font-size: 10px;
+    @media (max-width:$r_mob_500) {
+        font-size: 8px;
+    }
 }
 
 body {
@@ -131,6 +134,11 @@ ul, .description {
             border: 1px solid  $green;
             opacity: .8;
         }
+        @media (max-width:$r_mob_500) {
+            width: 4.5rem;
+            height: 4.5rem;
+            background-size: 2rem;
+        }
         &:hover {
             background-color: $green;
             border: 1px solid  $green;
@@ -148,6 +156,9 @@ ul, .description {
         top: .6rem;
         @media (max-width: $r_desk_hd) {
             color: $green;
+        }
+        @media (max-width:$r_mob_500) {
+            font-size: 1rem
         }
     }
     &__phone, &__menu {
@@ -173,12 +184,17 @@ ul, .description {
                 opacity: 1;
             }
         }
+        @media (max-width:$r_mob_500) {
+            width: 4.2rem;
+            height: 4.2rem;
+            background-size: 1.9rem;
+        }
     }
     &__menu {
         @media (max-width: $r_tab_900) {
             display: block;
-            width: 3.8rem;
-            height: 3.8rem;
+            width: 3.9rem;
+            height: 3.9rem;
             border-radius: 100%;
             background-color: $white;
             background-image: url(../images/menu.svg);
@@ -194,13 +210,21 @@ ul, .description {
                 opacity: 1;
             }
         }
+        @media (max-width:$r_mob_500) {
+            width: 4.4rem;
+            height: 4.4rem;
+            background-size: 2rem;
+        }
     }
     &__buttons {
         @media (max-width: $r_desk_hd) {
             display: flex;
             align-items: center;
             gap: 1.5rem;
-        }  
+        } 
+        @media (max-width:$r_mob_500) {
+            gap: 1.4rem;
+        } 
     }
 }
 .container {
@@ -236,6 +260,9 @@ ul, .description {
         margin-top: 1.3rem;
         @media (max-width: $r_tab) {
             text-align: center;
+        }
+        @media (max-width:$r_mob_500) {
+            margin-top: 1rem;
         }
     }
     &__flex {
@@ -306,6 +333,9 @@ ul, .description {
             max-width: 300px;
             margin: 0 auto;
             margin-top: 3rem;
+        }
+        @media (max-width:$r_mob_500) {
+            max-width: 220px;
         }
     }
     &__text {
@@ -417,6 +447,12 @@ ul, .description {
             right: 3rem;
             width: 8rem;
         }
+        @media (max-width:$r_mob_500) {
+            bottom: inherit;
+            top: 10.2rem;
+            right: inherit;
+            left: -1.2rem;
+        }
     }
     &__avocado {  
         top: 5.6rem;
@@ -431,6 +467,14 @@ ul, .description {
         top: 0;
         left: 69rem;
         width: 8.4rem;
+        @media (max-width:$r_mob_500) {
+            transform: rotate(90deg);
+            width: 6.4rem;
+            top: inherit;
+            left: inherit;
+            right: -15px;
+            bottom: 37rem;
+        }
     }
     &__pepper {
         top: 40rem;
@@ -439,21 +483,36 @@ ul, .description {
         @media (max-width: $r_desk_full_1750) {
             display: none;
         }
+        @media (max-width:$r_mob_500) {
+            display: block;
+            top: 46rem;
+            left: 0;
+            width: 5.6rem;
+        }
     }
     &__bean1 {
         bottom: 26rem;
         left: 2.6rem;
         width: 4.7rem;
+        @media (max-width:$r_mob_500) {
+            display: none;
+        }
     }
     &__bean2 {
         bottom: 22rem;
         left: 0;
         width: 3.6rem;
+        @media (max-width:$r_mob_500) {
+            display: none;
+        }
     }
     &__bean3 {
         bottom: 17.5rem;
         left: 5rem;
         width: 6.6rem;
+        @media (max-width:$r_mob_500) {
+            display: none;
+        }
     }
 }
 .title {
@@ -487,6 +546,9 @@ ul, .description {
     }
     &_trends {
         margin-top: 9rem;
+        @media (max-width: $r_tab) {
+            margin-top: 6rem;
+        }
     }
 }
 .description {
