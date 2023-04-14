@@ -238,8 +238,11 @@ ul, .description {
 }
 .main {
     position: relative;
-    padding-bottom: 18.7rem;
+    padding-bottom: 17rem;
     z-index: 0;
+    @media (max-width:$r_mob_500) {
+        padding-bottom: 4rem;
+    } 
     &__item {
         margin-left: 12rem;
         max-width: 378px;
@@ -462,6 +465,9 @@ ul, .description {
             width: 9.8rem;
             top: 12rem;
         }
+        @media (max-width:$r_mob_500) {
+            right: -5rem;
+        }
     }
     &__cucumber { 
         top: 0;
@@ -539,13 +545,13 @@ ul, .description {
         }
     }
     &_catalog {
-        margin-top: 18rem;
+        margin-top: 15rem;
         @media (max-width: $r_tab) {
             margin-top: 10rem;
         }
     }
     &_trends {
-        margin-top: 9rem;
+        margin-top: 8rem;
         @media (max-width: $r_tab) {
             margin-top: 6rem;
         }
@@ -620,6 +626,10 @@ ul, .description {
         padding-top: 5.4rem;
         padding-bottom: 6rem;
     }
+    @media (max-width:$r_mob_500) {
+        max-width: 210px;
+        padding-bottom: 6.5rem;
+    }
 }
 .swiper {
     overflow: initial;
@@ -643,10 +653,18 @@ ul, .description {
             @media (max-width: $r_desk_hd) {
                 height: 400px;
             }
+            @media (max-width:$r_mob_500) {
+                height: 240px;
+                text-align: center;
+                padding: 2.2rem 1.7rem;
+            }
             &:hover {
                 .swiper-slide__hover {
                     height: 23.3rem;
                     opacity: 1;
+                    @media (max-width:$r_mob_500) {
+                        height: auto;
+                    }
                 }
                 &::after {
                     content: '';
@@ -666,22 +684,40 @@ ul, .description {
         }
         &_milk {
             background-image: url(../images/milk.png);
+            @media (max-width:$r_mob_500) {
+               
+            }
         }
         &_pasta {
             background-image: url(../images/pasta.png);
+            @media (max-width:$r_mob_500) {
+                
+            }
         }
         &_steaks {
             background-image: url(../images/steaks.png);
+            @media (max-width:$r_mob_500) {
+                
+            }
         }
         &__title {
             font-family: $font-cormorant;
             font-size: 3rem;
             color: $green;
             margin-bottom: 0;
+            @media (max-width:$r_mob_500) {
+                font-size: 1.75rem;
+                margin-top: 0;
+                margin-bottom: 2rem;
+            }
         }
         &__hover {
             height: 0;
             opacity: 0;
+            @media (max-width:$r_mob_500) {
+                height: auto;
+                opacity: 1;
+            }
         }
         &__text {
             color: rgba($green, 0.7);
@@ -689,6 +725,9 @@ ul, .description {
             margin-top: 2.5rem;
             margin-bottom: 3.4rem;
             min-width: 26.3rem;
+            @media (max-width:$r_mob_500) {
+                display: none;
+            }
         }
         &__link {
             text-transform: uppercase;
@@ -700,6 +739,12 @@ ul, .description {
             gap: 2rem;
             letter-spacing: 0.1rem;
             opacity: .8;
+            transition: 0.3s;
+            @media (max-width:$r_mob_500) {
+                font-size: 1.25rem;
+                justify-content: center;
+                gap: 9px;
+            }
             &:hover {
                 opacity: 1;
             }
@@ -711,6 +756,10 @@ ul, .description {
                 background-image: url(../images/plus.svg);
                 background-size: cover;
                 background-repeat: no-repeat;
+                @media (max-width:$r_mob_500) {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
             }
         }
         &__cover {
@@ -846,7 +895,7 @@ ul, .description {
 }
 .about {
     padding-top: 3.7rem;
-    padding-bottom: 10rem;
+    padding-bottom: 8rem;
     &__box {
         display: flex;
         justify-content: space-between;
