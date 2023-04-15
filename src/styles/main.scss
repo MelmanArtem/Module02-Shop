@@ -243,6 +243,9 @@ ul, .description {
     @media (max-width:$r_mob_500) {
         padding-bottom: 4rem;
     } 
+    @media (max-width:$r_mob_360) {
+        padding-bottom: 0;
+    }
     &__item {
         margin-left: 12rem;
         max-width: 378px;
@@ -536,6 +539,9 @@ ul, .description {
     @media (max-width: $r_tab) {
         text-align: center;
     }
+    @media (max-width:$r_mob_360) {
+        font-size: 4rem;
+    }
     &__span {
         font-style: italic;
     }
@@ -567,6 +573,9 @@ ul, .description {
         font-size: 1.8rem;
         @media (max-width: $r_desk_1280) {
             font-size: 1.6rem;
+        }
+        @media (max-width:$r_mob_360) {
+            font-size: 1.5rem;
         }
     }
     &__size-m {
@@ -643,6 +652,10 @@ ul, .description {
         position: relative;
         z-index: 0;
         transition: 0.3s;
+        @media (max-width:$r_mob_500) {
+            text-align: center;
+            padding: 3rem 2rem 2.2rem;
+        }
         &_white {
             height: 52rem;
             display: flex;
@@ -676,6 +689,9 @@ ul, .description {
                     left: 2px;
                     border-radius: 2rem;
                     z-index: -1;
+                    @media (max-width:$r_mob_360) {
+                        display: none;
+                    }
                 }
             }
         }
@@ -685,20 +701,14 @@ ul, .description {
         &_milk {
             background-image: url(../images/milk.png);
             @media (max-width:$r_mob_500) {
-               
+                background-image: url(../images/milk-mobi.png);
             }
         }
         &_pasta {
             background-image: url(../images/pasta.png);
-            @media (max-width:$r_mob_500) {
-                
-            }
         }
         &_steaks {
             background-image: url(../images/steaks.png);
-            @media (max-width:$r_mob_500) {
-                
-            }
         }
         &__title {
             font-family: $font-cormorant;
@@ -771,6 +781,10 @@ ul, .description {
             @media (max-width: $r_desk_hd) {
                 height: 250px;
             }
+            @media (max-width:$r_mob_500) {
+                height: 80%;
+                width: 100%;
+            }
         }
         &__image {
             width: 100%;
@@ -786,6 +800,10 @@ ul, .description {
             min-height: 5.5rem;
             min-width: 30rem;
             line-height: 1.5;
+            @media (max-width:$r_mob_500) {
+                font-size: 1.6rem;
+                text-align: center;
+            }
         }
         &__price {
             font-size: 2.4rem;
@@ -942,6 +960,10 @@ ul, .description {
             gap: 4rem;
             font-size: 2.2rem;
         }
+        @media (max-width:$r_mob_500) {
+            gap: 3rem;
+            font-size: 2.2rem;
+        }
     }
     &__item {
         display: flex;
@@ -950,7 +972,16 @@ ul, .description {
         align-items: center;
         @media (max-width: $r_desk) {
             font-size: 2.2rem;
-            gap: 6rem;
+            gap: 3rem;
+        }
+        @media (max-width:$r_tab) {
+            gap: 2rem;
+        }
+        @media (max-width:$r_mob_500) {
+            gap: 1.5rem;
+        }
+        @media (max-width:$r_mob_360) {
+            gap: 1rem;
         }
         &::before {
             content: '';
@@ -1009,6 +1040,9 @@ ul, .description {
         background-color: transparent;
         margin: 0 auto;
         margin-top: 6rem;
+        @media (max-width: $r_mob_500) {
+            font-weight: 400;
+        }
         &:hover {
             opacity: 1;
             cursor: pointer;
@@ -1038,6 +1072,9 @@ ul, .description {
         font-size: 1.4rem;
         gap: 1rem;
     }
+    @media (max-width: $r_mob_500) {
+        display: none;
+    }
     &__item {
         flex-basis: 23rem;
         text-align: center;
@@ -1061,6 +1098,37 @@ ul, .description {
         @media (max-width: $r_tab) {
             font-size: 1.4rem;
             padding: 1.8rem 0;
+        }
+    }
+}
+.category-swiper {
+    display: none;
+    @media (max-width: $r_mob_500) {
+        display: block;
+        text-align: center;
+    }
+    &__link {
+        padding: 2.4rem 0;
+        border: 1px solid rgba($green, 0.5);
+        color: rgba($green, 0.5);
+        font-size: 1.8rem;
+        text-decoration: none;
+        border-radius: 4rem;
+        display: block;
+        transition: 0.3s;
+        &:hover {
+            border: 1px solid $orange;
+            color: $orange;
+            box-shadow: none;
+        }
+        @media (max-width: $r_mob_500) {
+            font-size: 1.6rem;
+            flex-basis: 140px;
+        }
+        @media (max-width: $r_mob_360) {
+            font-size: 1.25rem;
+            padding: 1.7rem 0;
+            flex-basis: 110px;
         }
     }
 }
@@ -1105,6 +1173,9 @@ ul, .description {
         max-width: 35.1rem;
         height: 100%;
         object-fit: contain;
+        @media (max-width:$r_mob_500) {
+            height: 90%; 
+        }
     }
     &__title {
         font-family: $font-cormorant;
@@ -1213,6 +1284,10 @@ ul, .description {
         @media (max-width: $r_tab) {
             justify-content: center;
         }
+        @media (max-width: $r_mob_500) {
+           gap: 2rem;
+           margin-top: 4rem;
+        }
     }
     &__item { 
         background-repeat: no-repeat;
@@ -1230,16 +1305,27 @@ ul, .description {
         height: 32px;
         width: 5.4rem;
         background-image: url(../images/mastercard.svg);
+        @media (max-width: $r_mob_500) {
+            height: 31px;
+            width: 6.4rem;
+        }
     } 
     &__visa {
         height: 25px;
         width: 8.2rem;
         background-image: url(../images/visa.svg);
+        @media (max-width: $r_mob_500) {
+            height: 24px;
+            width: 10rem;
+        }
     }
     &__paypal {
         height: 27px;
         width: 9.6rem;
         background-image: url(../images/paypal.svg);
+        @media (max-width: $r_mob_500) {
+            width: 12rem;
+        }
     }
 }
 .contact {
@@ -1295,6 +1381,14 @@ ul, .description {
                 display: flex;
                 justify-content: space-between;
             }
+            @media (max-width: $r_mob_360) {
+                margin-top: 2rem;
+                font-size: 1.5rem;
+            }
+            @media (max-width: 330px) {
+                flex-direction: column;
+                align-items: center;
+            }
         }
         &__form {
             flex-basis: 589px;
@@ -1302,6 +1396,9 @@ ul, .description {
                 flex-basis: auto;
                 flex-grow: 1;
             }
+            @media (max-width: 330px) {
+                margin-top: 5.7rem;
+            } 
         }
         &__link {
             color: $green;
@@ -1351,6 +1448,10 @@ ul, .description {
     border-radius: 2rem;
     @media (max-width: $r_desk) {
         padding: 3.2rem 3rem 4rem;
+    }
+    @media (max-width: $r_mob_360) {
+        border-width: 1px;
+        padding: 2.5rem 1.8rem 3.8rem;
     }
     &__title {
         font-size: 3rem;
@@ -1465,6 +1566,10 @@ footer {
             font-size: 3rem;
             margin-bottom: 1rem;
         }
+        @media (max-width: $r_mob_500) {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
     }
     &__text {
         display: flex;
@@ -1511,18 +1616,31 @@ footer {
         &:hover {
             opacity: 1;
         }
+        @media (max-width: $r_mob_500) {
+            width: 5.6rem;
+            height: 5.6rem;
+        }
     }
     &__vk {
         background-image: url(../images/vk.svg);
         background-size: 2.3rem;
+        @media (max-width: $r_mob_500) {
+            background-size: 2.6rem;
+        }
     }
     &__inst {
         background-image: url(../images/inst.svg);
         background-size: 1.8rem;
+        @media (max-width: $r_mob_500) {
+            background-size: 2.2rem;
+        }
     }
     &__fb {
         background-image: url(../images/fb.svg);
         background-size: 1.8rem;
+        @media (max-width: $r_mob_500) {
+            background-size: 2.2rem;
+        }
     }
 } 
 @keyframes shadow {
