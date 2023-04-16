@@ -217,6 +217,7 @@ ul, .description {
         }
     }
     &__buttons {
+        position: relative;
         @media (max-width: $r_desk_hd) {
             display: flex;
             align-items: center;
@@ -225,6 +226,62 @@ ul, .description {
         @media (max-width:$r_mob_500) {
             gap: 1.4rem;
         } 
+    }
+    &__dropdown {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        position: absolute;
+        right: -60px;
+        bottom: -140px;
+        border-radius: 30px;
+        background-color: $white;
+        width: 280px;
+        padding: 20px;
+        z-index: 1;
+        box-shadow: 0 0 33px 0 rgba($green, .3);
+        box-sizing: border-box;
+        &::after {
+            content: '';
+            border: 9px solid transparent;
+            border-bottom: 17px solid $white;
+            position: absolute;
+            top: -25px;
+            right: 70px;
+        }
+    }
+    &__cover {
+        position: relative;
+        width: 4rem;
+        height: 6rem;
+        overflow: hidden;
+    }
+    &__img {
+        position: absolute;
+        width: 4rem;
+        height: 7rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+    }
+    &__product {
+        display: inline-block;
+        color: $green;
+        text-decoration: none;
+        border-bottom: 1px solid $green;
+    }
+    &__close {
+        display: block;
+        width: 12px;
+        height: 12px;
+        background-image: url(../images/close.svg);
+        border: none;
+        background-color: transparent;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        cursor: pointer;
     }
 }
 .container {
@@ -361,6 +418,8 @@ ul, .description {
         position: absolute;
         color: $green;
         text-align: left;
+        z-index: 100;
+        cursor: pointer;
         &:hover {
             &::before {
                 background-color: $orange;
