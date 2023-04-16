@@ -271,18 +271,18 @@ ul, .description {
         text-decoration: none;
         border-bottom: 1px solid $green;
     }
-    &__close {
-        display: block;
-        width: 12px;
-        height: 12px;
-        background-image: url(../images/close.svg);
-        border: none;
-        background-color: transparent;
-        position: absolute;
-        top: 2rem;
-        right: 2rem;
-        cursor: pointer;
-    }
+}
+.close {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-image: url(../images/close.svg);
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
 }
 .container {
     max-width: 1440px;
@@ -481,6 +481,47 @@ ul, .description {
                 right: 2rem;
             }
         }
+    }
+    &__about {
+        position: absolute;
+        border-radius: 30px;
+        background-color: $white;
+        width: 240px;
+        padding: 20px;
+        z-index: 1;
+        box-shadow: 0 0 33px 0 rgba($green, .3);
+        box-sizing: border-box; 
+        visibility: hidden;
+        &_1 {
+            left: -70px;
+            top: 100px;
+        }
+        &_2 {
+            right: -120px;
+            top: 260px;
+        }
+        &_3 {
+            right: 190px;
+            bottom: -200px;
+        }
+    }
+    &__title {
+        font-size: 2.4rem;
+        font-family: $font-cormorant;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    &__description {
+        font-size: 1.4rem;
+        color: rgba($green, 0.7);
+        margin-top: 2rem;
+        margin-bottom: 0;
+        min-width: 30rem;
+        line-height: 1.5;  
+    }
+    &__price {
+        font-size: 1.6rem;
+        margin-bottom: 0;
     }
     &__food {
         display: block;
