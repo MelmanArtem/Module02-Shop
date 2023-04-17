@@ -297,6 +297,9 @@ ul, .description {
     position: relative;
     padding-bottom: 17rem;
     z-index: 0;
+    @media (max-width: $r_tab) {
+        padding-bottom: 12rem;
+    }
     @media (max-width:$r_mob_500) {
         padding-bottom: 4rem;
     } 
@@ -734,6 +737,7 @@ ul, .description {
     padding-top: 2rem;
     padding-bottom: 12.8rem;
     @media (max-width: $r_tab) {
+        padding-top: 0;
         padding-bottom: 4rem;
     }
     &__text {
@@ -768,7 +772,6 @@ ul, .description {
         z-index: 0;
         transition: 0.3s;
         @media (max-width:$r_mob_500) {
-            text-align: center;
             padding: 3rem 2rem 2.2rem;
         }
         &_white {
@@ -783,7 +786,6 @@ ul, .description {
             }
             @media (max-width:$r_mob_500) {
                 height: 240px;
-                text-align: center;
                 padding: 2.2rem 1.7rem;
             }
             &:hover {
@@ -817,6 +819,7 @@ ul, .description {
             background-image: url(../images/milk.png);
             @media (max-width:$r_mob_500) {
                 background-image: url(../images/milk-mobi.png);
+                background-position: center;
             }
         }
         &_pasta {
@@ -833,7 +836,8 @@ ul, .description {
             @media (max-width:$r_mob_500) {
                 font-size: 1.75rem;
                 margin-top: 0;
-                margin-bottom: 2rem;
+                margin-bottom: 1rem;
+                text-align: center;
             }
         }
         &__hover {
@@ -897,8 +901,7 @@ ul, .description {
                 height: 250px;
             }
             @media (max-width:$r_mob_500) {
-                height: 80%;
-                width: 100%;
+                height: 110px;
             }
         }
         &__image {
@@ -906,29 +909,47 @@ ul, .description {
             max-width: 35.1rem;
             height: 100%;
             object-fit: contain;
+            @media (max-width:$r_mob_500) {
+                max-width: 120px;
+            }
         }
         &__description {
             font-size: 1.8rem;
             color: rgba(39, 48, 15, 0.7);
             margin-top: 2rem;
-            margin-bottom: 0;
-            min-height: 5.5rem;
-            min-width: 30rem;
+            min-height: 55px;
+            max-width: 30rem;
             line-height: 1.5;
+            text-align: center;
             @media (max-width:$r_mob_500) {
-                font-size: 1.6rem;
-                text-align: center;
+                font-size: 1.5rem;
+                margin-top: 10px;
+                min-height: 38px;
+                
             }
         }
         &__price {
             font-size: 2.4rem;
             margin-bottom: 3rem;
+            @media (max-width: $r_desk_hd) {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            @media (max-width:$r_mob_500) {
+                font-size: 1.75rem;
+                margin-bottom: 1.5rem;
+            }
         }
         &__footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 5%;
+            @media (max-width:$r_mob_500) {
+                max-width: 150px;
+                margin: 0 auto;
+            }
         }
     }
     &-pagination {
@@ -1300,6 +1321,7 @@ ul, .description {
         margin-bottom: 0;
         @media (max-width: $r_tab) {
             font-size: 2rem;
+            text-align: center;
         }
     }
     &__description {
@@ -1310,16 +1332,19 @@ ul, .description {
         min-height: 6.1rem;
         max-width: 30rem;
         line-height: 1.5;
+        text-align: center;
         @media (max-width: $r_tab) {
             font-size: 1.3rem;
         }
     }
     &__price {
         font-size: 2.4rem;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
         margin-top: 0;
+        text-align: center;
         @media (max-width: $r_tab) {
             font-size: 2rem;
+            margin-bottom: 1.5rem;
         }
     }
     &__footer {
